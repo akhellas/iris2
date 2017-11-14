@@ -1,0 +1,8 @@
+{
+  "name": "iris-server",
+  "version": "2.0.0",
+  "description": "iris2 server",
+  "main": "server.js",
+  "author": "ak.hellas@gmail.com",
+  "license": "MIT"
+}
