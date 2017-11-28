@@ -1,6 +1,8 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { MenuService } from './menu.service';
+
 import { NavComponent } from './nav/nav.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { FooterComponent } from './footer/footer.component';
@@ -10,7 +12,7 @@ import { FooterComponent } from './footer/footer.component';
     CommonModule
   ],
   declarations: [NavComponent, SidenavComponent, FooterComponent],
-  providers: [],
+  providers: [MenuService],
   exports: [NavComponent, SidenavComponent, FooterComponent]
 })
 export class CoreModule {
