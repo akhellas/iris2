@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  copyRight = '\u00A9 2016-2018, Γενικό Επιτελείο Αεροπορίας - Κέντρο Μηχανογράφησης';
+  version = '2.0.0';
+
   constructor() { }
 
   ngOnInit() {
