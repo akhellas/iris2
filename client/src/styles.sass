@@ -1,10 +1,26 @@
 @charset 'utf-8'
 
-@import '../node_modules/bulma/sass/utilities/_all.sass'
+@import "../node_modules/bulma/sass/utilities/initial-variables"
+@import "../node_modules/bulma/sass/utilities/functions"
 
+@import "../node_modules/bulma/sass/utilities/derived-variables"
 
+//custom variables
+$nav-tabs-active-color: dodgerblue
+$nav-tabs-hover-color: whitesmoke
 
-// overrides here
-
+//overrides here
+$tabs-link-color: lightgrey
+$tabs-border-bottom-color: $dark
+$tabs-link-active-border-bottom-color: $nav-tabs-active-color
+$tabs-link-active-color: $nav-tabs-active-color
+$tabs-link-hover-border-bottom-color: $nav-tabs-hover-color
+$tabs-link-hover-color:	$nav-tabs-hover-color
 
 @import '../node_modules/bulma/bulma'
+
+html
+    height: 100%
+
+body
+    height: 100%

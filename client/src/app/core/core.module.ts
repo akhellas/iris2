@@ -3,14 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { NavComponent } from './nav/nav.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [NavComponent, SidenavComponent],
+  declarations: [NavComponent, SidenavComponent, FooterComponent],
   providers: [],
-  exports: [NavComponent, SidenavComponent]
+  exports: [NavComponent, SidenavComponent, FooterComponent]
 })
 export class CoreModule {
   constructor( @Optional() @SkipSelf() parentModule: CoreModule) {
