@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 
+import { MenuService } from './core/menu.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'iris2';
+  constructor(private menuService: MenuService) {}
 }

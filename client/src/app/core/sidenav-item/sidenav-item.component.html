@@ -1,0 +1,8 @@
+<div *ngIf="item">
+  <p class="menu-label">{{item.name}}</p>
+  <ul class="menu-list">
+    <li *ngFor="let child of item.items">
+      <a href="child.url">{{child.name}}</a>
+    </li>
+  </ul>
+</div>

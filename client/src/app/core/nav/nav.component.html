@@ -11,10 +11,9 @@
       <div class="navbar-item tabs-item">
         <div class="tabs is-medium is-centered">
           <ul>
-            <li class="is-active"><a>Έγγραφα</a></li>
-            <li><a>Εργασίες</a></li>
-            <li><a>Θέματα</a></li>
-            <li><a>Επαφές</a></li>
+            <li *ngFor="let item of menu.items">
+              <a [ngClass]="{'is-active': item.name == current}" [routerLink]="item.url" (click)="setCurrent(item)">{{item.name}}</a>
+            </li>
           </ul>
         </div>
       </div>

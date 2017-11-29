@@ -4,10 +4,10 @@ import { RouterModule, Routes } from "@angular/router"
 
 import { SharedModule } from '../shared/shared.module';
 
-import { DocumentsDashboardComponent } from './documents-dashboard/documents-dashboard.component';
+import { TasksDashboardComponent } from './tasks-dashboard/tasks-dashboard.component';
 
 const routes: Routes = [
-  { path: 'documents', component: DocumentsDashboardComponent }
+  { path: 'tasks', component: TasksDashboardComponent }
 ];
 
 @NgModule({
@@ -16,6 +16,6 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     SharedModule
   ],
-  declarations: [DocumentsDashboardComponent]
+  declarations: [TasksDashboardComponent]
 })
-export class DocumentsModule { }
+export class TasksModule { }

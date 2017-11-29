@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuService } from '../menu.service';
+import { MenuItem } from '../models';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  private _current: string;
 
-  ngOnInit() {
+  constructor(private menuService: MenuService) { }
+
+  ngOnInit() { }
+
+  setCurrent(item: MenuItem) {
+    this.menuService.current = item;
+    this._current = item.name;
   }
 
+  get current(): string {
+    return this._current;
+  }
+
+  get menu(): MenuItem {
+    return this.menuService.menu;
+  }
 }
