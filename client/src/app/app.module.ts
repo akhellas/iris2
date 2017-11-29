@@ -4,11 +4,15 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { DocumentsModule } from './documents/documents.module';
+import { TasksModule } from './tasks/tasks.module';
 
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './core/dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/documents', pathMatch: 'full' }
+  { path: 'dashboard', component: DashboardComponent },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -17,9 +21,11 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes, {enableTracing: true}),
+    RouterModule.forRoot(routes),
     CoreModule,
-    SharedModule
+    SharedModule,
+    DocumentsModule,
+    TasksModule
   ],
   providers: [],
   bootstrap: [AppComponent]

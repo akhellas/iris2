@@ -1,3 +1,10 @@
 <aside class="menu" *ngIf="menu">
-  <app-sidenav-item *ngFor="let item of menu.items" [item]="item"></app-sidenav-item>
+  <div *ngFor="let item of menu.items">
+      <div class="menu-label">{{item.name}}</div>
+      <ul class="menu-list">
+        <li *ngFor="let child of item.items">
+          <a [routerLink]="child.url">{{child.name}}</a>
+        </li>
+      </ul>
+  </div>
 </aside>

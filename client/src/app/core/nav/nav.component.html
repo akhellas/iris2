@@ -11,8 +11,8 @@
       <div class="navbar-item tabs-item">
         <div class="tabs is-medium is-centered">
           <ul>
-            <li *ngFor="let item of menu.items">
-              <a [ngClass]="{'is-active': item.name == current}" [routerLink]="item.url" (click)="setCurrent(item)">{{item.name}}</a>
+            <li *ngFor="let item of menu.items" [ngClass]="{'is-active': item.name == current}">
+              <a [routerLink]="item.url" (click)="setCurrent(item)">{{item.name}}</a>
             </li>
           </ul>
         </div>

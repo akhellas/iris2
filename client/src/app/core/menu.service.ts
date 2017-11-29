@@ -22,24 +22,24 @@ export class MenuService {
   buildMenu() {
     let documentsMenu = new MenuItem('Έγγραφα', '/documents', [
       new MenuItem('ΔΗΜΙΟΥΡΓΙΑ', '', [
-        new MenuItem('Νέο', ''),
-        new MenuItem('Εισαγωγή', ''),
-        new MenuItem('Πρόχειρα', '')
+        new MenuItem('Νέο', 'documents/new'),
+        new MenuItem('Εισαγωγή', 'documents/insert'),
+        new MenuItem('Πρόχειρα', 'documents/drafts')
       ]),
       new MenuItem('ΕΙΣΕΡΧΟΜΕΝΑ', '', [
-        new MenuItem('Για Ενέργεια', ''),
-        new MenuItem('Για Ενημέρωση', ''),
+        new MenuItem('Για Ενέργεια', 'documents/inbox/action'),
+        new MenuItem('Για Ενημέρωση', 'documents/inbox/info'),
       ]),
       new MenuItem('ΕΞΕΡΧΟΜΕΝΑ', '', [
-        new MenuItem('Για Υπογραφή', ''),
-        new MenuItem('Σε Εξέλιξη', ''),
-        new MenuItem('Για Διανομή', '')
+        new MenuItem('Για Υπογραφή', 'documents/outbox/pending'),
+        new MenuItem('Σε Εξέλιξη', 'documents/outbox/inprogress'),
+        new MenuItem('Για Διανομή', 'documents/outbox/distribution')
       ]),
       new MenuItem('ΑΡΧΕΙΟ', '', [
-        new MenuItem('Εισερχόμενα', ''),
+        new MenuItem('Εισερχόμενα', 'documents/archive/inbox'),
         new MenuItem('Εξερχόμενα', ''),
         new MenuItem('Από Εργασίες', ''),
-        new MenuItem('Αναζήτηση', '')
+        new MenuItem('Αναζήτηση', 'documents/archive/search')
       ]),
       new MenuItem('ΔΙΑΦΟΡΑ', '', [
         new MenuItem('Πρωτόκολλο', ''),
@@ -51,15 +51,15 @@ export class MenuService {
       new MenuItem('ΔΗΜΙΟΥΡΓΙΑ', '', [
         new MenuItem('Νέο', '')
       ]),
-      new MenuItem('Εκκρεμότητες', '', [
+      new MenuItem('ΕΚΚΡΕΜΟΤΗΤΕΣ', '', [
         new MenuItem('Εισερχόμενες', ''),
         new MenuItem('Εξερχόμενες', '')
       ]),
-      new MenuItem('Ολοκληρωμένες', '', [
+      new MenuItem('ΟΛΟΚΛΗΡΩΜΕΝΕΣ', '', [
         new MenuItem('Εισερχόμενες', ''),
         new MenuItem('Εξερχόμενες', '')
       ]),
-      new MenuItem('Για Ενημέρωση', '', [
+      new MenuItem('ΓΙΑ ΕΝΗΜΕΡΩΣΗ', '', [
         new MenuItem('Εισερχόμενες', ''),
         new MenuItem('Εξερχόμενες', '')
       ])

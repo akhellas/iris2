@@ -8,7 +8,7 @@ import { MenuService } from './menu.service';
 import { NavComponent } from './nav/nav.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { FooterComponent } from './footer/footer.component';
-import { SidenavItemComponent } from './sidenav-item/sidenav-item.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   imports: [
@@ -16,9 +16,19 @@ import { SidenavItemComponent } from './sidenav-item/sidenav-item.component';
     RouterModule,
     FormsModule
   ],
-  declarations: [NavComponent, SidenavComponent, FooterComponent, SidenavItemComponent],
   providers: [MenuService],
-  exports: [NavComponent, SidenavComponent, SidenavItemComponent, FooterComponent]
+  declarations: [
+    NavComponent, 
+    SidenavComponent, 
+    FooterComponent, 
+    DashboardComponent
+  ],
+  exports: [
+    NavComponent, 
+    SidenavComponent, 
+    FooterComponent, 
+    DashboardComponent
+  ]
 })
 export class CoreModule {
   constructor( @Optional() @SkipSelf() parentModule: CoreModule) {

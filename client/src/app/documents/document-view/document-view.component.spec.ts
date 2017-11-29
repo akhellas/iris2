@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SidenavItemComponent } from './sidenav-item.component';
+import { DocumentViewComponent } from './document-view.component';
 
-describe('SidenavItemComponent', () => {
-  let component: SidenavItemComponent;
-  let fixture: ComponentFixture<SidenavItemComponent>;
+describe('DocumentViewComponent', () => {
+  let component: DocumentViewComponent;
+  let fixture: ComponentFixture<DocumentViewComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SidenavItemComponent ]
+      declarations: [ DocumentViewComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SidenavItemComponent);
+    fixture = TestBed.createComponent(DocumentViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
