@@ -8,6 +8,8 @@ export class MenuService {
   private _menu: MenuItem;
   private _current: MenuItem;
 
+  isOpen: boolean = true;
+
   constructor() {
     this.buildMenu();
     this.current = this._menu.items[0];
@@ -18,6 +20,10 @@ export class MenuService {
   get current(): MenuItem { return this._current; }
 
   get menu(): MenuItem { return this._menu; }
+
+  toggleMenu() {
+    this.isOpen = !this.isOpen
+  }
 
   buildMenu() {
     let documentsMenu = new MenuItem('Έγγραφα', '/documents', [

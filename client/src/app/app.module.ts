@@ -9,10 +9,12 @@ import { TasksModule } from './tasks/tasks.module';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './core/dashboard/dashboard.component';
+import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

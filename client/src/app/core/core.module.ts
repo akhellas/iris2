@@ -9,6 +9,7 @@ import { NavComponent } from './nav/nav.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     NavComponent, 
     SidenavComponent, 
     FooterComponent, 
-    DashboardComponent
+    DashboardComponent, PageNotFoundComponent
   ],
   exports: [
     NavComponent, 

@@ -1,5 +1,11 @@
 <nav class="navbar is-fixed-top is-dark">
+
   <div class="navbar-brand">
+      <a class="navbar-item" (click)="toggleMenu()">
+        <span class="icon">
+            <i class="fa fa-bars"></i>
+          </span>
+      </a>
     <a class="navbar-item" href="/">
       IRIS
     </a>
@@ -7,20 +13,19 @@
 
   <div class="navbar-menu">
     <div class="navbar-start">
-      <div class="navbar-item"></div>
-      <div class="navbar-item tabs-item">
-        <div class="tabs is-medium is-centered">
-          <ul>
-            <li *ngFor="let item of menu.items" [ngClass]="{'is-active': item.name == current}">
-              <a [routerLink]="item.url" (click)="setCurrent(item)">{{item.name}}</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <div class="navbar-item is-expanded"></div>
+      <a class="navbar-item app-navbar-item" *ngFor="let item of menu.items" [routerLink]="item.url" routerLinkActive="is-active" (click)="setCurrent(item)">{{item.name}}</a>
+      <div class="navbar-item is-expanded"></div>
     </div>
+
     <div class="navbar-end">
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">akhellas@gmail.com</a>
+        <a class="navbar-link">
+            <span class="icon">
+                <i class="fa fa-user"></i>
+              </span>
+          akhellas@gmail.com
+        </a>
         <div class="navbar-dropdown is-right">
             <a class="navbar-item">
               Προτιμήσεις
@@ -32,11 +37,13 @@
                 Αντικατάσταση
               </a>
             <hr class="navbar-divider">
-            <div class="navbar-item">
+            <a class="navbar-item">
               Αποσύνδεση
-            </div>
+            </a>
           </div>
       </div>
     </div>
+
   </div>
+
 </nav>

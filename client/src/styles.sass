@@ -6,24 +6,27 @@
 @import "../node_modules/bulma/sass/utilities/derived-variables"
 
 //custom variables
-$nav-tabs-active-color: dodgerblue
-$nav-tabs-hover-color: whitesmoke
+
 
 //overrides here
-$tabs-link-color: lightgrey
-$tabs-border-bottom-color: $dark
-$tabs-link-active-border-bottom-color: $nav-tabs-active-color
-$tabs-link-active-color: $nav-tabs-active-color
-$tabs-link-hover-border-bottom-color: $nav-tabs-hover-color
-$tabs-link-hover-color:	$nav-tabs-hover-color
+
 
 @import '../node_modules/bulma/bulma'
 
 html
-    height: 100%
+    height: 100vh
 
 body
-    height: 100%
+    height: calc(100vh - 5rem)
+    overflow-y: hidden
 
 .has-navbar-fixed-bottom
-    padding-bottom: 1.7rem !important
+    padding-bottom: 1.75rem !important
+
+.column
+.is-fullheight
+    min-height: calc(100vh - 5rem) !important
+
+.hero
+.is-fullheight
+    min-height: calc(100vh - 4.8rem) !important

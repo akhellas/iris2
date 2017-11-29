@@ -1,4 +1,4 @@
-<aside class="menu" *ngIf="menu">
+<aside class="menu" *ngIf="menu" style="height: 100%; overflow-y: auto">
   <div *ngFor="let item of menu.items">
       <div class="menu-label">{{item.name}}</div>
       <ul class="menu-list">

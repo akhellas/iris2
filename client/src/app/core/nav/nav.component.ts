@@ -15,6 +15,10 @@ export class NavComponent implements OnInit {
 
   ngOnInit() { }
 
+  toggleMenu() {
+    this.menuService.toggleMenu();
+  }
+
   setCurrent(item: MenuItem) {
     this.menuService.current = item;
     this._current = item.name;
