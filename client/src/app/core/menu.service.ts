@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { MenuItem } from './models';
+import { MenuItem } from './core.model';
 
 @Injectable()
 export class MenuService {
@@ -26,7 +26,7 @@ export class MenuService {
   }
 
   buildMenu() {
-    let documentsMenu = new MenuItem('Έγγραφα', '/documents', [
+    let documentsMenu = new MenuItem('Έγγραφα', 'documents', [
       new MenuItem('ΔΗΜΙΟΥΡΓΙΑ', '', [
         new MenuItem('Νέο', 'documents/new'),
         new MenuItem('Εισαγωγή', 'documents/insert'),
@@ -43,34 +43,46 @@ export class MenuService {
       ]),
       new MenuItem('ΑΡΧΕΙΟ', '', [
         new MenuItem('Εισερχόμενα', 'documents/archive/inbox'),
-        new MenuItem('Εξερχόμενα', ''),
-        new MenuItem('Από Εργασίες', ''),
+        new MenuItem('Εξερχόμενα', 'documents/archive/outbox'),
+        new MenuItem('Από Εργασίες', 'documents/archive/tasks'),
         new MenuItem('Αναζήτηση', 'documents/archive/search')
       ]),
       new MenuItem('ΔΙΑΦΟΡΑ', '', [
-        new MenuItem('Πρωτόκολλο', ''),
-        new MenuItem('Βιβλιοθήκη', '')
+        new MenuItem('Πρωτόκολλο', 'registry'),
+        new MenuItem('Βιβλιοθήκη', 'library')
       ])
     ]);
 
-    let tasksMenu = new MenuItem('Εργασίες', '/tasks', [
+    let tasksMenu = new MenuItem('Εργασίες', 'tasks', [
       new MenuItem('ΔΗΜΙΟΥΡΓΙΑ', '', [
-        new MenuItem('Νέο', '')
+        new MenuItem('Νέο', 'tasks/new')
       ]),
       new MenuItem('ΕΚΚΡΕΜΟΤΗΤΕΣ', '', [
-        new MenuItem('Εισερχόμενες', ''),
-        new MenuItem('Εξερχόμενες', '')
+        new MenuItem('Εισερχόμενες', 'tasks/pending/inbox'),
+        new MenuItem('Εξερχόμενες', 'tasks/pending/outbox')
       ]),
       new MenuItem('ΟΛΟΚΛΗΡΩΜΕΝΕΣ', '', [
-        new MenuItem('Εισερχόμενες', ''),
-        new MenuItem('Εξερχόμενες', '')
+        new MenuItem('Εισερχόμενες', 'tasks/complete/inbox'),
+        new MenuItem('Εξερχόμενες', 'tasks/complete/outbox')
       ]),
       new MenuItem('ΓΙΑ ΕΝΗΜΕΡΩΣΗ', '', [
-        new MenuItem('Εισερχόμενες', ''),
-        new MenuItem('Εξερχόμενες', '')
+        new MenuItem('Εισερχόμενες', 'tasks/info/inbox'),
+        new MenuItem('Εξερχόμενες', 'tasks/info/outbox')
       ])
     ]);
 
-    this._menu = new MenuItem('root', '', [documentsMenu, tasksMenu]);
+    let issuesMenu = new MenuItem('Θέματα', 'issues', [
+      new MenuItem('ΔΗΜΙΟΥΡΓΙΑ', '', [
+        new MenuItem('Νέο', 'issues/new')
+      ]),
+      new MenuItem('ΑΝΑ ΚΑΤΑΣΤΑΣΗ', '', [
+        new MenuItem('Μη Αναγνωσμένα', 'issues/unread'),
+        new MenuItem('Σε Εξέλιξη', 'issues/pending'),
+        new MenuItem('Ληξιπρόθεσμα', 'issues/delayed'),
+        new MenuItem('Ολοκληρωμένα', 'issues/complete')
+      ])
+    ]);
+
+    this._menu = new MenuItem('root', '', [documentsMenu, tasksMenu, issuesMenu]);
   }
 }

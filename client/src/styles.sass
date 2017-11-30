@@ -14,11 +14,16 @@
 @import '../node_modules/bulma/bulma'
 
 html
-    height: 100vh
+    height: 100%
+    overflow: hidden
+    -webkit-scrollbar
+        display: none
 
 body
-    height: calc(100vh - 5rem)
-    overflow-y: hidden
+    //height: 100% //calc(100vh - 5rem)
+    overflow: hidden
+    -webkit-scrollbar
+        display: none
 
 .has-navbar-fixed-bottom
     padding-bottom: 1.75rem !important
@@ -29,4 +34,4 @@ body
 
 .hero
 .is-fullheight
-    min-height: calc(100vh - 4.8rem) !important
+    min-height: calc(100vh - 5rem) !important

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { MenuService } from '../menu.service';
-import { MenuItem } from '../models';
+import { MenuItem } from '../core.model';
 
 @Component({
   selector: 'app-sidenav',

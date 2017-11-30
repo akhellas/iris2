@@ -1,3 +1,106 @@
-<p>
-  document-create works!
-</p>
+<div class="level">
+
+  <div class="level-left">
+    <div class="level-item">
+      <span>title</span>
+    </div>
+  </div>
+
+  <div class="level-right">
+    <div class="level-item">
+      <span>toolbar</span>
+    </div>
+  </div>
+
+</div>
+
+<form [formGroup]="draftForm">
+
+  <div class="field is-horizontal">
+    <div class="field-label is-normal">
+      <label class="label">Type</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+          <div class="control">
+              <div class="select is-fullwidth" formControlName="type">
+                <select>
+                  <option>Business development</option>
+                  <option>Marketing</option>
+                  <option>Sales</option>
+                </select>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="field is-horizontal">
+    <div class="field-label is-normal">
+      <label class="label">Classification</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <div class="control">
+          <input class="input" type="text" formControlName="classification">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="field is-horizontal">
+    <div class="field-label is-normal">
+      <label class="label">Priority</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <div class="control">
+          <input class="input" type="text" formControlName="priority">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="field is-horizontal">
+    <div class="field-label is-normal">
+      <label class="label">Folder</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <div class="control">
+          <input class="input" type="text" formControlName="folder" placeholder="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="field is-horizontal">
+    <div class="field-label is-normal">
+      <label class="label">Subject</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <div class="control">
+          <textarea class="textarea" formControlName="subject" rows="3" placeholder=""></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="field is-horizontal">
+    <div class="field-label is-normal">
+      <label class="label">Remarks</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <div class="control">
+          <textarea class="textarea" formControlName="remarks" rows="2" placeholder=""></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</form>
+
+<p>value: {{ draftForm.value | json }}</p>
+<p>status: {{ draftForm.status | json }}</p>

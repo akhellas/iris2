@@ -1,11 +1,13 @@
 <app-nav></app-nav>
 
-<div class="columns is-gapless">
-    <div class="column is-fullheight is-2">
+<div class="columns is-mobile is-gapless">
+    <div class="column is-fullheight is-narrow">
         <app-sidenav></app-sidenav>
     </div>
-    <div class="column is-fullheight is-10">
-        <router-outlet></router-outlet>
+    <div class="column is-fullheight">
+        <div class="section">
+             <router-outlet></router-outlet>
+        </div>
     </div>
 </div>
 
